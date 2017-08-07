@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		
+	<link rel="stylesheet" href="Riot.css" type="text/css">
+	<script type="text/javascript" src="Riot.js"></script>
+
+	</head>
+	
+
+
+<body style="width: 1150px; margin: 0px auto;">
+
+
+<h1 style="margin: 25px;">Riot Color picker Test Suite</h1>
+
+<img src="https://image.ibb.co/k2Rw1a/color_picker.png">
+
+<h2> Positive test cases: </h2>
+	 
+<div class="good">
+	   <ol type="1">
+			<li>Verify that when click on a area on HW color picker, selected color should stick on the target element for preview.</li> 
+			<button class="Npass" onclick="togglePass(this)">Pass</button> 
+			<button class="Nfail" onclick="toggleFail(this)">Fail</button>
+			<li>Verify that when click on "OK" button, color picker should close and selected color should stick on target element.</li> 
+			<button class="Npass" onclick="togglePass(this)">Pass</button> 
+			<button class="Nfail" onclick="toggleFail(this)">Fail</button>
+			<li>Verify that when click on "Cancel" button, color picker should close and selected color should clear from target element.</li> 
+			<button class="Npass" onclick="togglePass(this)">Pass</button> 
+			<button class="Nfail" onclick="toggleFail(this)">Fail</button>
+			<li>Verify that when click inside HEX input, input cursor should focus in the HEX input.</li> 
+			<button class="Npass" onclick="togglePass(this)">Pass</button>
+			<button class="Nfail" onclick="toggleFail(this)">Fail</button>
+			<li>Verify that when enter valid HEX value into the input, preview should display correct color</li> 
+			<button class="Npass" onclick="togglePass(this)">Pass</button> 
+			<button class="Nfail" onclick="toggleFail(this)">Fail</button>
+			<li>Verify that when click on a area on the HW color picker, small target circle should drop on the spot.</li> 
+			<button class="Npass" onclick="togglePass(this)">Pass</button>
+			<button class="Nfail" onclick="toggleFail(this)">Fail</button>
+			<li>Verify that when click on blackness bar, index triangles on both side should follow.</li> 
+			<button class="Npass" onclick="togglePass(this)">Pass</button>
+			<button class="Nfail" onclick="toggleFail(this)">Fail</button>
+			<li>Verify that when slide the index triangles on blackness bar vertically, blackness of the color should adjust accordingly.</li> 
+			<button class="Npass" onclick="togglePass(this)">Pass</button>
+			<button class="Nfail" onclick="toggleFail(this)">Fail</button>
+			<li>Verify that when target circle move horizontally, HUE color should adjust accordingly.</li> 
+			<button class="Npass" onclick="togglePass(this)">Pass</button> 
+			<button class="Nfail" onclick="toggleFail(this)">Fail</button>
+			<li>Verify that when target circle move vertically, color whiteness should adjust accordingly.</li> 
+			<button class="Npass" onclick="togglePass(this)">Pass</button> 
+			<button class="Nfail" onclick="toggleFail(this)">Fail</button>
+    </ol>
+</div>
+
+<h2>Negative test cases:</h2>
+
+<div class="bad">
+	<ol type="1">
+		<li>Verify that when invalid HEX code entered in the input, should display error message "Please enter valid HEX value!"</li> 
+		<button class="Npass" onclick="togglePass(this)">Pass</button> 
+		<button class="Nfail" onclick="toggleFail(this)">Fail</button>
+	</ol>
+</div>
+
+<h1 style="border-top: 5px solid white; padding: 25px;">Bug report</h1>
+<p>Ticket number: #12345</p>
+
+<p style="font-size: 20px; padding: 5px;">Title: Error when user clicks "Cancel" Button on the color picker</p>
+
+<p>
+Environment
+<span style="margin: 20px; border: 2px solid white; padding: 5px;">Assign to: Sky walker</span> 
+<span style="margin: 20px; border: 2px solid white; padding: 5px;">Status: Open</span>
+<span style="margin: 20px; border: 2px solid white; padding: 5px;">Ticket opened by: Yasen Simayi___  Date:2017/08/05</span>
+</p>
+	<ul>
+		<li>OS: Windows 10, Android 7.1</li>
+		<li>Browser: Chrome, Version 59.0.3071.115 (Official Build) (64-bit).</li>
+		<li>Region: US, EU, Asia</li>
+		<li>Severity: <span style="color: orange">Medium</span></li>
+		<li>Priority: <span style="color: orange">Medium</span></li>
+		<li>Reproducibility: 10/10   Every time</li>
+	</ul>
+
+<p>Steps to reproduce</p>
+   <ol type="1">
+   	<li>Open link: <span style="color: teal">staging.color-picker.com</span> or build version 2.75 host:4622ada</li>
+   	<li>Login with provided credentials <span style="color: green;">Login info: ID = yourName , Password = yourPassword</span></li>
+   	<li>Click open color picker</li>
+   	<li>Pick a color and click "Cancel" button</li>
+   </ol>
+<p>Actual result: There is a modal opened with error message <span style="color: red;">"Cancel [error code 0314] The system is down. [OK]"</span></p>
+
+<p style="padding-bottom: 50px;">Expected result : When click on "Cancel" button, color picker should close without error and should cancel your choice.</p>
+
+
+</body>
+
+</html>
+
